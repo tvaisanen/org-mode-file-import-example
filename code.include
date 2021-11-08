@@ -6,7 +6,7 @@
   to_replace=\\[\\.\\/
   pattern="s/$to_replace/\[$replace_with\//g"
   # replace [[./relative/path.txt]] with [[$filepath/relative/path.txt]]
-  cat $filepath/$filename} | sed $pattern
+  cat $filepath/$filename | sed $pattern
 #+end_src
 
 #+RESULTS: load_file
