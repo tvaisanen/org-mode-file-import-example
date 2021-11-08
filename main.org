@@ -1,0 +1,13 @@
+#+TITLE: How to build dynamic documentation with ORG-mode
+#+PROPERTY: header-args :dir .
+#+INCLUDE: code.include
+
+#+begin_quote
+The table of contents above is built dynamically from the module imports.
+#+end_quote
+
+Simple example on how to build ORG export dynamically from multiple files.
+
+# Load Modules
+#+CALL: load_file(filepath="./module/a", filename="README.org")
+#+CALL: load_file(filepath="./module/b", filename="README.org")

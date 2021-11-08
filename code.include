@@ -1,0 +1,12 @@
+# -*- mode: org -*-
+
+#+name: load_file
+#+begin_src bash :var filepath="." filename="" :exports none :results raw :eval yes
+  replace_with=$(sed "s/\//\\\\\//g" <<< $filepath)
+  to_replace=\\[\\.\\/
+  pattern="s/$to_replace/\[$replace_with\//g"
+  # replace [[./relative/path.txt]] with [[$filepath/relative/path.txt]]
+  cat $filepath/$filename} | sed $pattern
+#+end_src
+
+#+RESULTS: load_file

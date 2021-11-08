@@ -1,0 +1,3 @@
+* Module A
+
+This is the content for module A.
